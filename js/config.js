@@ -12,7 +12,7 @@ const PASSWORD_CONFIG = {
 
 // 网站信息配置
 const SITE_CONFIG = {
-    name: 'MyTv',    
+    name: 'MyTv',
     url: 'https://tv.7788.zone.id/',
     description: '免费在线视频搜索与观看平台',
     logo: 'https://images.icon-icons.com/38/PNG/512/retrotv_5520.png',
@@ -21,15 +21,17 @@ const SITE_CONFIG = {
 
 // API站点配置
 const API_SITES = {
-    ffzy: {
-        api: 'http://ffzy5.tv',
-        name: '非凡影视',
-        detail: 'http://ffzy5.tv'
-    },
     heimuer: {
         api: 'https://json.heimuer.xyz',
         name: '黑木耳',
-        detail: 'https://heimuer.tv'
+        detail: 'https://heimuer.tv',
+        filterAdRule: '#EXT-X-DISCONTINUITY\\n#EXTINF:\\d+\\.\\d+,\\n.*?\\n#EXT-X-DISCONTINUITY'
+    },
+    ffzy: {
+        api: 'http://ffzy5.tv',
+        name: '非凡影视',
+        detail: 'http://ffzy5.tv',
+        filterAdRule: '#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:6.666667,[\\s\\S]*?#EXT-X-DISCONTINUITY'
     },
     tyyszy: {
         api: 'https://tyyszy.com',
